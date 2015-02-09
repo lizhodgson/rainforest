@@ -1,14 +1,8 @@
 Rainforest::Application.routes.draw do
-  get 'users/new'
-
-  get 'users/create'
-
   resources :products
-
   resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
 end
-
-
 
 
   # Example of regular route:
